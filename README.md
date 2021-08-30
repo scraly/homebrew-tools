@@ -15,3 +15,9 @@ Install [GopherSay](https://github.com/scraly/gophersay):
 ```
 brew install gophersay
 ```
+
+Upgrade the GopherSay CLI to the latest version:
+
+```
+brew upgrade gophersay
+```
