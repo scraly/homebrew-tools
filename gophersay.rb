@@ -5,32 +5,43 @@
 class Gophersay < Formula
   desc ""
   homepage "https://github.com/scraly/homebrew-tools"
-  version "1.0.1"
-  bottle :unneeded
+  version "1.0.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/scraly/gophersay/releases/download/v1.0.1/gophersay_1.0.1_Darwin_x86_64.tar.gz"
-      sha256 "3ac4da7f8882ad3ec82e9d7a5e3342d2463437275e0c72086af624e76dcb784c"
+      url "https://github.com/scraly/gophersay/releases/download/v1.0.2/gophersay_1.0.2_Darwin_x86_64.tar.gz"
+      sha256 "084b60f89b442cc66159a495421d3e9fb48b3861b324a2ac1062d4491c342f27"
+
+      def install
+        bin.install "gophersay"
+      end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/scraly/gophersay/releases/download/v1.0.1/gophersay_1.0.1_Darwin_arm64.tar.gz"
-      sha256 "f311f5daf5a8556b1197e10483ab4c17c22ef47a790554ead7ea9478a0466c4b"
+      url "https://github.com/scraly/gophersay/releases/download/v1.0.2/gophersay_1.0.2_Darwin_arm64.tar.gz"
+      sha256 "0e98ff426817075492f3e61569c28d5bfd7a69ab7264f6cf03dd99e007277ae1"
+
+      def install
+        bin.install "gophersay"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/scraly/gophersay/releases/download/v1.0.1/gophersay_1.0.1_Linux_x86_64.tar.gz"
-      sha256 "3e9bb2b51501df72cb007c4978bdc9997a6ff83479b1f189fd8f4b73b55b5037"
+      url "https://github.com/scraly/gophersay/releases/download/v1.0.2/gophersay_1.0.2_Linux_x86_64.tar.gz"
+      sha256 "bd3af60d4e9f5deb63dfd675cc5c2aa515d4897fb056b3170d316d9a9e466998"
+
+      def install
+        bin.install "gophersay"
+      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/scraly/gophersay/releases/download/v1.0.1/gophersay_1.0.1_Linux_arm64.tar.gz"
-      sha256 "5ba1bee7e9a23fcb732176580f251b887a372a32211e408d7f04638a95b65ded"
-    end
-  end
+      url "https://github.com/scraly/gophersay/releases/download/v1.0.2/gophersay_1.0.2_Linux_arm64.tar.gz"
+      sha256 "b8e8113b90efcd8dce4a38d648000cd5f1d8830bba039a585ca2d5067eb17740"
 
-  def install
-    bin.install "gophersay"
+      def install
+        bin.install "gophersay"
+      end
+    end
   end
 end
